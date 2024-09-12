@@ -1,13 +1,10 @@
-
-
-import counterSlice from './counterSlice/counterSlice'
-import counterReducer from './Reducer'
 import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from './counterSlice/counterSlice'
 
-const enhancer=window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-const store=configureStore({
-    reducer:{
-        counter:counterSlice
-    },
+const store = configureStore({
+  reducer: {
+    counter: counterReducer, // Use counterReducer from your slice
+  },
 })
+
 export default store
